@@ -12,6 +12,7 @@ print("Press Enter if you are ready...")
 
 
 # Define the quiz questions and answers
+# Round 1
 Fellowship_quiz = [
     {
         "question": "What part of the Shire does Frodo live in before Gandalf gives him the ring?",
@@ -40,7 +41,7 @@ Fellowship_quiz = [
     }
 ]
 
-
+#Round 2
 TwoTowers_quiz = [
     {
         "question": "What are Saruman's warriors called?",
@@ -69,7 +70,7 @@ TwoTowers_quiz = [
     }
 ]
 
-
+# Round 3
 ReturnKing_quiz = [
     {
         "question": "What is the name of Theoden's niece?",
@@ -120,7 +121,7 @@ def run_quiz(quiz):
         else:
             print(f"Wrong! The correct answer is {q['answer']}.\n")
     
-    # Run Round 1
+# Run Round 1
 print("Fellowship of the Ring-verse")
 run_quiz(Fellowship_quiz)
 
@@ -142,7 +143,6 @@ if score > 5:  # Scoring criteria for Round 2
 print(f"Your final score is {score} out of {len(TwoTowers_quiz+Fellowship_quiz+ReturnKing_quiz)}.")
 if score > 10:
     show_image(os.path.join(image_directory, "Pass.gif"))
-    #im = Image.open('Pass.gif')
     print("You bow to NO ONE")
 else:
     show_image(os.path.join(image_directory, "Youshallnotpass.jpeg"))
